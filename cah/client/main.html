@@ -1,0 +1,17 @@
+<p>Cards against Humanity</p>
+<div ng-controller="GameCtrl">
+  <form>
+    <label>Key</label>
+    <input ng-model="newCard.key">
+    <label>Text</label>
+    <input ng-model="newCard.description">
+    <button ng-click="cards.save(newCard); newCard='';">Add</button>
+  </form>
+ <ul>
+    <li ng-repeat="card in cards">
+      {{card.key}}
+      <p>{{card.description}}</p>
+      <button ng-click="remove(party)">X</button>
+    </li>
+  </ul>
+ </div>
